@@ -70,37 +70,42 @@ const LogInForm = () => {
       <form onSubmit={form.handleSubmit(onSubmit)}>
        <div className= 'space-y-2'>
  
-         <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email:</FormLabel>
-              <FormControl>
-              <input className= 'border indigo-200 rounded-sm flex w-full items-center justify-evenly' placeholder="" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-            
-          )}
+       <FormField
+  control={form.control}
+  name="email"
+  render={({ field }) => (
+    <FormItem>
+      <FormControl>
+        <input 
+          className='border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' 
+          placeholder="" 
+          {...field} 
         />
-        <FormField
-          control={form.control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Password:</FormLabel>
-              <FormControl>
-              <input 
-              type= "password"
-              className= 'border indigo-200 rounded-sm flex w-full items-center justify-evenly' 
-              placeholder="" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-            
-          )}
+      </FormControl>
+      <FormLabel className="text-md mt-2 block">Email:</FormLabel>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
+<FormField
+  control={form.control}
+  name="password"
+  render={({ field }) => (
+    <FormItem>
+      <FormControl>
+        <input 
+          type="password"
+          className='border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' 
+          placeholder="" 
+          {...field} 
         />
+      </FormControl>
+      <FormLabel className="text-md mt-2 block">Password:</FormLabel>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
         <br></br>
       </div>
         <Button variant="contained" className='outline bg-indigo-500 w-full my-6' type="submit">Login</Button>
