@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/editer';
-import { Button } from '@radix-ui/themes';
+
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import Button from '@mui/material/Button';
 import { useRouter } from 'next/navigation'; // Corrected import
 import { toast, useToast } from '@/components/ui/use-toast';
 
@@ -307,7 +308,7 @@ const EditForm = () => {
               )}
             />
             <br></br>
-            <Button type="submit">Update Profile</Button>
+            <Button variant="contained" className='outline bg-indigo-500 w-full my-6' type="submit">Edit Profile</Button>
           </form>
         </Form>
       </div>

@@ -103,9 +103,8 @@ const LogInForm = () => {
         />
         <br></br>
       </div>
-        <Button className='w-full my-6' type="submit">Login</Button>
-            
-
+        <Button variant="contained" className='outline bg-indigo-500 w-full my-6' type="submit">Login</Button>
+     
       </form>
       <div className='mx-auto my-4 flex w-full items-center justify-evenly before:mr-4 before:block before:h-px before:flex-grow before:bg-stone-400 after:ml-4 after:bloack after:h-px after:flex-grow after:bg-stone-400'>
        or
