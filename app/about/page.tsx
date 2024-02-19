@@ -5,11 +5,11 @@ const AboutPage = () => {
   return (
     <div>
 
-<div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl w-3/4 min-h-[75vh] mx-auto'>
-      <div className='py-6 px-6 bg-white shadow-md rounded-md overflow-y-auto hide-scrollbar w-3/4 min-h-[75vh] my-8'>
+<div className='flex justify-center items-center bg-indigo-200 p-5 sm:p-10 rounded-xl mx-auto w-full sm:w-3/4 lg:min-h-[75vh]'>
+      <div className='py-6 px-4 sm:px-6 bg-white shadow-md rounded-md overflow-y-auto hide-scrollbar w-full my-8'>
         <section className="about-section">
         <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mb-8 font-bold"> About Gamer Date</h3>
-        <div className="bg-indigo-50 p-6 rounded-lg shadow-lg">
+        <div className="bg-indigo-50 p-4 sm:p-6 rounded-lg shadow-lg">
         
           <p>
             Welcome to Gamer Date, where gamers can connect, play, and build
