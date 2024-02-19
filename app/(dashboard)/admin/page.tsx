@@ -9,7 +9,7 @@ import Player from "../../User";
  async function page(){
   const session = await getServerSession(authOptions);
 
-    if (session?.user) {
+    if (session?.player) {
       return (<h2 className= 'text 4-xl uppercase'>Welcome to Gamer Date, {session.player.username}</h2>
   )}
     return (
