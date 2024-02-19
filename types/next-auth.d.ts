@@ -5,15 +5,11 @@ import { Url } from "next/dist/shared/lib/router/router";
 
 declare module "next-auth" {
   interface User {
-    player_id: number; 
-    id: number | string;
+    id: string;
     username: string | null;
     email: string;
-    first_name: string;
-    last_name: string;
-    bio: string;
-    looking_for: string;
-    image: Url; 
+
+    
   }
 
   interface Session {
@@ -50,7 +46,8 @@ declare global {
     player: {
       player_id: number;
       username: string;
-      email: string;      
+      email: string;  
+        
     };
   }
 }
