@@ -8,6 +8,7 @@ import { FaDiscord } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { BsTwitch } from "react-icons/bs"
+import { useRouter } from 'next/navigation';
 
 import Link from 'next/link';
 import { Button } from '@radix-ui/themes';
@@ -95,7 +96,7 @@ const Profile: React.FC<ProfileProps> = ({ player }) => {
     <li className="mr-4">
       <Link href={profileData.twitch}>
         <div className="flex items-center justify-center bg-purple-700 rounded-lg cursor-pointer" style={{ width: '40px', height: '40px' }}>
-          <FaTwitch className='text-white text-2xl'/>
+          <BsTwitch className='text-white text-2xl'/>
         </div>
       </Link>
     </li>
@@ -144,12 +145,3 @@ const Profile: React.FC<ProfileProps> = ({ player }) => {
 };
 
 export default Profile;
-
-
-
-
-
-
-
-
-

@@ -79,7 +79,7 @@ async function MatchPage() {
   if (session?.user) {
     return (
       <div>
-        <h1>{username}</h1>
+      
         <Matches player_id={player_id} />
       </div>
     );
