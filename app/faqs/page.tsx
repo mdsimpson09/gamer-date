@@ -2,12 +2,10 @@ import React from 'react';
 
 const faqs = () => {
   return (
-    <div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl w-3/4 min-h-[75vh] mx-auto'>
-    <div className='py-6 px-6 bg-white shadow-md rounded-md overflow-y-auto hide-scrollbar w-3/4 min-h-[75vh] my-8'>
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mb-8 font-bold">
-        Community Standards
-      </h1>
-      <div className="bg-indigo-50 p-6 rounded-lg shadow-lg mb-6">
+    <div className='flex justify-center items-center bg-indigo-200 p-5 sm:p-10 rounded-xl mx-auto w-full sm:w-3/4 lg:min-h-[75vh]'>
+    <div className='py-6 px-4 sm:px-6 bg-white shadow-md rounded-md overflow-y-auto hide-scrollbar w-full my-8'>
+    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-8 font-bold">Community Standards</h3>
+      <div className="bg-indigo-50 p-4 sm:p-6 rounded-lg shadow-lg">
       <ul className="list-disc ml-4 text-base sm:text-lg mb-4">
         <li className="text-base sm:text-lg mb-4">
           The sole purpose of Gamer-Date is to help players, age 18 and older, build communities and meet friends, not to search for romantic partners or sexual relationships.
