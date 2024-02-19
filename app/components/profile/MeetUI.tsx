@@ -13,17 +13,24 @@ import { Icon, IconButton } from '@mui/material';
 
 interface MeetProps {
   player: {
-    player_id: number | null;
-    first_name: string | null;
-    username: string | null;
-    bio: string | null;
-    looking_for: string | null;
-    image: string | null;
+    first_name?: string | null;
+    username?: string | null;
+    bio?: string | null;
+    looking_for?: string | null;
+    favorite_games?: string | null;
+    favorite_device?: string | null;
+    image?: string | null;
+    player_id?: number;
+    instagram?: string | null;
+    twitter?: string | null;
+    discord?: string | null;
+    twitch?: string | null;
+    facebook?: string | null;
   } | null;
   toggleRefresh: () => void;
 }
 
-const Meet: React.FC<MeetProps> = ({ player, toggleRefresh }) => {
+const MeetUI: React.FC<MeetProps> = ({ player }) => {
 
   if (!player) {
     return null;
@@ -45,16 +52,26 @@ const Meet: React.FC<MeetProps> = ({ player, toggleRefresh }) => {
         <p className="text-gray-700 font-bold capitalize"> about me: </p>
         <p>{player.bio || ""}</p>
         <br />
+
         <p className="text-gray-700 font-bold capitalize"> I&apos;m looking for:</p>
         <p className="text-gray-700">{player.looking_for || ""}</p>
+        <br />
+        <p className="text-gray-700 font-bold capitalize"> My Favorite Games: </p>
+        <p>{player.favorite_games || ""}</p>
+        <br></br>
+        <p className="text-gray-700 font-bold capitalize"> How I Play: </p>
+        <p>{player.favorite_device || ""}</p>
+
+
       </div>
       <br></br>
+      
       
     </div>
   );
 };
 
-export default Meet;
+export default MeetUI;
 
 // 'use client';
 // import React, { useEffect, useState } from 'react';

@@ -76,7 +76,14 @@ interface PlayerProfile {
   username: string | null;
   bio: string | null;
   looking_for: string | null;
+  favorite_games: string | null;
+  favorite_device: string | null;
   image: string | null;
+  instagram?: string | null;
+    twitter?: string | null;
+    discord?: string | null;
+    twitch?: string | null;
+    facebook?: string | null;
 }
 
 const Meet: React.FC = () => {
@@ -128,7 +135,7 @@ const Meet: React.FC = () => {
   return (
     <div>
       <div>
-      <MeetUI player={profileData} />
+      <MeetUI player={profileData} toggleRefresh={handleToggleRefresh} />
       </div>
       <div className="mt-.5">
       <MeetControls player={profileData} toggleRefresh={handleToggleRefresh}/>

@@ -21,6 +21,11 @@ interface MeetProps {
     bio: string | null;
     looking_for: string | null;
     image: string | null;
+    instagram?: string | null;
+    twitter?: string | null;
+    discord?: string | null;
+    twitch?: string | null;
+    facebook?: string | null;
   } | null;
 
   toggleRefresh: () => void;
