@@ -98,11 +98,11 @@ const Navbar = () => {
           
         <Link href='/about'><span className={isActive('/about')}>About</span></Link>
           <Link href='/profile'><span className={isActive('/profile')}>Profile</span></Link>
-          <Link href='/meet'><span className={isActive('/meet')}>Find Players</span></Link>
+          <Link href='/meet'><span className={isActive('/meet')}>Meet</span></Link>
           {/* Add the rest of your links here, applying linkStyle for each */}
-          <Link href='/matches'><span className={isActive('/matches')}>Your Matches</span></Link>
+          <Link href='/matches'><span className={isActive('/matches')}>Matches</span></Link>
           <Link href='/faqs'><span className={isActive('/faqs')}>FAQS</span></Link>
-          <Link href='/sign-up'><span className={isActive('/sign-up')}>Sign up</span></Link>
+          <Link href='/sign-up'><span className={isActive('/sign-up')}>Register</span></Link>
           
           {session?.user ? (
             <UserAccountNav />
