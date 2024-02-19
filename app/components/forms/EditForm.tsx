@@ -68,9 +68,10 @@ const EditForm = () => {
       } catch (error) {
         console.error('Error fetching profile data:', error);
         toast({
-          title: 'Error',
-          description: 'Failed to load profile data',
+          title: 'Uh oh!',
+          description: 'You have not linked this social media account yet.',
           variant: 'destructive',
+          className: 'bg-indigo-400 text-white text-lg',
         });
       }
     };

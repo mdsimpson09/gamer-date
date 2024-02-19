@@ -38,6 +38,7 @@ export async function POST(req: NextRequest) {
           disliked_player_id: disliked_player_id,
         },
       },
+      
     });
 
     if (existingDislike) {
@@ -53,8 +54,8 @@ export async function POST(req: NextRequest) {
         disliked_player_id,
       },
     });
-
-    return NextResponse.json({ message: "Player disliked successfully" });
+    console.log(`Player ${currentPlayerId} successfully disliked player ${dislikedPlayerId}`);
+    return NextResponse.json({ message: "Success" });
   } catch (error) {
     console.error("Error:", error);
     return NextResponse.json({ message: "Something went wrong" });
