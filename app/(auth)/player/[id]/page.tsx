@@ -11,6 +11,9 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { SlGameController } from 'react-icons/sl';
 import { BsTwitch } from "react-icons/bs"
+import { useRouter } from 'next/navigation';
+import { toast, useToast } from '@/components/ui/use-toast';
+
 
 interface UserProfileProps {
   player_id: string;
@@ -31,8 +34,26 @@ interface UserProfileProps {
 const UserProfilePage: React.FC = () => {
   const [userProfile, setUserProfile] = useState<UserProfileProps | null>(null);
   const pathname = usePathname();
-  
-  
+  const { toast } = useToast();
+
+  const router = useRouter();
+
+  const navigateToLink = (url: string | null) => {
+    if (url) {
+      window.open(url, '_blank');
+    } else {
+      // Handle the case where the URL is null (e.g., show a notification or tooltip)
+      console.log("This service is not linked.");
+      toast({
+        title: 'Uh oh!',
+        description: 'This Player has not linked this social media account yet.',
+        variant: 'destructive',
+        className: 'bg-indigo-400 text-white text-lg',
+      });
+    }
+  }; [toast];
+
+
   useEffect(() => {
     // Extract player ID from pathname
     const player_id = pathname.split('/')[2]; // Adjust according to your URL structure
@@ -82,52 +103,32 @@ const UserProfilePage: React.FC = () => {
         <br></br>
         <h1 className="text-xl font-bold mb-4 capitalize">Connect with {userProfile.username}</h1>
         <ul className="flex list-none p-0 justify-between">
-  {userProfile.twitch && (
-    <li className="mr-4">
-      <Link href={userProfile.twitch}>
-        <div className="flex items-center justify-center bg-purple-700 rounded-lg cursor-pointer" style={{ width: '40px', height: '40px' }}>
-          <FaTwitch className='text-white text-2xl'/>
-        </div>
-      </Link>
-    </li>
-  )}
-  {userProfile.discord && (
-    <li className="mr-4">
-      <Link href={userProfile.discord}>
-        <div className="flex items-center justify-center bg-indigo-400 rounded-lg cursor-pointer" style={{ width: '40px', height: '40px' }}>
-          <FaDiscord className="text-white text-2xl" />
-        </div>
-      </Link>
-    </li>
-  )}
-  {userProfile.instagram && (
-    <li className="mr-4">
-      <Link href={userProfile.instagram}>
-        <div className="flex items-center justify-center bg-white rounded-lg cursor-pointer" style={{ width: '40px', height: '40px' }}>
-          <img src='/instagram.png' alt="Instagram" className="text-white text-2xl" />
-        </div>
-      </Link>
-    </li>
-  )}
-  {userProfile.twitter && (
-    <li className="mr-4">
-      <Link href={userProfile.twitter}>
-        <div className="flex items-center justify-center bg-black rounded-lg cursor-pointer" style={{ width: '40px', height: '40px' }}>
-          <FaXTwitter className="text-white text-2xl" />
-        </div>
-      </Link>
-    </li>
-  )}
-  {userProfile.facebook && (
-    <li>
-      <Link href={userProfile.facebook}>
-        <div className="flex items-center justify-center bg-blue-600 rounded-full cursor-pointer" style={{ width: '40px', height: '40px' }}>
-          <FaFacebook className="text-white text-2xl" />
-        </div>
-      </Link>
-    </li>
-  )}
-</ul>
+          <li className="mr-4" onClick={() => navigateToLink(userProfile.twitch)}>
+            <div className="flex items-center justify-center bg-purple-700 rounded-lg cursor-pointer" style={{ width: '40px', height: '40px' }}>
+              <FaTwitch className='text-white text-2xl'/>
+            </div>
+          </li>
+          <li className="mr-4" onClick={() => navigateToLink(userProfile.discord)}>
+            <div className="flex items-center justify-center bg-indigo-400 rounded-lg cursor-pointer" style={{ width: '40px', height: '40px' }}>
+              <FaDiscord className="text-white text-2xl" />
+            </div>
+          </li>
+          <li className="mr-4" onClick={() => navigateToLink(userProfile.instagram)}>
+            <div className="flex items-center justify-center bg-pink-600 rounded-lg cursor-pointer" style={{ width: '40px', height: '40px' }}>
+              <FaInstagram className="text-white text-2xl" />
+            </div>
+          </li>
+          <li className="mr-4" onClick={() => navigateToLink(userProfile.twitter)}>
+            <div className="flex items-center justify-center bg-blue-500 rounded-lg cursor-pointer" style={{ width: '40px', height: '40px' }}>
+              <FaXTwitter className="text-white text-2xl" />
+            </div>
+          </li>
+          <li onClick={() => navigateToLink(userProfile.facebook)}>
+            <div className="flex items-center justify-center bg-blue-600 rounded-full cursor-pointer" style={{ width: '40px', height: '40px' }}>
+              <FaFacebook className="text-white text-2xl" />
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   );
