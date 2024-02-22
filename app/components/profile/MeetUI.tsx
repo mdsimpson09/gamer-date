@@ -37,12 +37,9 @@ const MeetUI: React.FC<MeetProps> = ({ player }) => {
   }
 
   return (
-  //   <div className='flex justify-center items-center bg-indigo-200 p-4 md:p-10 rounded-xl w-full max-w-xs md:max-w-2xl lg:max-w-4xl mx-auto mb-0'>
-  // <div className='py-6 px-4 md:px-6 bg-white shadow-md rounded-md my-8 w-full md:w-auto md:max-w-3xl overflow-y-auto'>
-    
     
     <div className='container flex justify-center items-center bg-indigo-200 p-10 rounded-xl min-w-7 w-[475px] h-[625px] mb-0'>
-   <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[500px] h-[525px] overflow-y-auto hide-scrollbar'> 
+      <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[500px] h-[525px] overflow-y-auto hide-scrollbar'>
         <img
           src={player.image || "/profile-image.jpg"}
           alt="Profile"

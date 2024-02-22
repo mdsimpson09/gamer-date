@@ -44,7 +44,14 @@ const MeetControls: React.FC<MeetProps> = ({ player, toggleRefresh }) => {
         <DislikeButton playerIdToDislike={player?.player_id} />
       </div>
 
-
+      {/* <div
+        onClick={toggleRefresh}
+        className="font-bold text-3xl rounded-full bg-blue-400 w-16 h-16 text-white hover:bg-blue-500 focus:outline-none focus:ring focus:ring-green-400 focus:ring-opacity-50 shadow-lg flex items-center justify-center"
+      >
+        <IconButton className="flex items-center justify-center">
+          <RedoIcon className="text-gray-50" />
+        </IconButton>
+      </div> */}
 
       <div className="font-bold text-2xl rounded-full bg-blue-400 w-24 h-24 text-white hover:bg-blue-500 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center">
         <Link href="/">
