@@ -36,17 +36,17 @@ const MeetControls: React.FC<MeetProps> = ({ player, toggleRefresh }) => {
   }
 
   return (
-    // <div className="container p-2 flex items-center justify-between space-x-4">
-    <div className="flex p-2 items-center justify-between space-x-2 md:space-x-4 w-full max-w-xs md:max-w-lg lg:max-w-xl mx-auto">
-
+    <div className="container p-2 flex items-center justify-between space-x-4">
       <div
         onClick={toggleRefresh}
-        className="font-bold text-3xl rounded-full bg-red-500 w-16 h-16 md:w-28 md:h-28 hover:bg-red-600 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center"
+        className="font-bold text-3xl rounded-full bg-red-500 w-28 h-28 hover:bg-red-600 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center"
       >
         <DislikeButton playerIdToDislike={player?.player_id} />
       </div>
 
-      <div className="font-bold text-2xl rounded-full bg-blue-400 md:w-28 md:h-28 text-white hover:bg-blue-500 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center">
+
+
+      <div className="font-bold text-2xl rounded-full bg-blue-400 w-24 h-24 text-white hover:bg-blue-500 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center">
         <Link href="/">
           <IconButton>
             <ExitIcon className="text-gray-50" />
@@ -56,7 +56,7 @@ const MeetControls: React.FC<MeetProps> = ({ player, toggleRefresh }) => {
 
       <div
         onClick={toggleRefresh}
-        className="font-bold text-3xl rounded-full bg-green-500 w-16 h-16 md:w-28 md:h-28 hover:bg-green-600 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center"
+        className="font-bold text-3xl rounded-full bg-green-500 w-28 h-28 hover:bg-green-600 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center"
       >
         <LikeButton playerIdTolike={player?.player_id} />
       </div>
