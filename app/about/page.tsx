@@ -17,7 +17,7 @@ const AboutPage = () => {
           </p>
         <br></br>
           <p>
-           We strive to provide you with the best opportunities to meet and conenct with other gamers above the age of 18. Say goodbye to the days where your team is filled with children. 
+           We strive to provide you with the best opportunities to meet and connect with other gamers above the age of 18. Say goodbye to the days where your team is filled with children. 
           </p>
           </div>
         </section>

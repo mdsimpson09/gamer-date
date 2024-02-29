@@ -33,10 +33,10 @@ export async function GET(req: NextRequest, res: NextResponse) {
       return NextResponse.json({ message: "No other players found" });
     }
 
-    // Generate a random offset
+
     const randomOffset = Math.floor(Math.random() * totalPlayers);
 
-    // Fetch the player at the random offset
+
     const randomPlayer = await prisma.player.findFirst({
       where: {
         username: { not: currentPlayerUsername },
@@ -48,11 +48,19 @@ export async function GET(req: NextRequest, res: NextResponse) {
         looking_for: true,
         image: true,
         player_id: true,
+        favorite_device: true,
+        favorite_games : true,
+        instagram: true,
+        facebook: true,
+        twitter: true,
+        twitch: true,
+        discord: true,
+       
       },
       take: 1,
       skip: randomOffset,
     });
-    // console.log("Player ID to Dislike:", randomPlayer?.player_id);
+ 
 
     if (!randomPlayer) {
       return NextResponse.json(
@@ -70,6 +78,8 @@ export async function GET(req: NextRequest, res: NextResponse) {
     );
   }
 }
+
+///****** working to establish random draw after parsing all db tables ******/
 // export async function GET(req: NextRequest) {
 //   try {
 //     const session = await getServerSession(authOptions);
