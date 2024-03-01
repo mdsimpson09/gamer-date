@@ -40,7 +40,7 @@ const Profile: React.FC<ProfileProps> = ({ player }) => {
       if (url) {
         window.open(url, '_blank');
       } else {
-        // Handle the case where the URL is null (e.g., show a notification or tooltip)
+        
         console.log("This service is not linked.");
       }
     };
@@ -74,13 +74,14 @@ const Profile: React.FC<ProfileProps> = ({ player }) => {
   }
 
   return (
-
-    <div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl min-w-7 w-[475px] h-[650px]'>
-        <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[375px] h-[500px] overflow-y-auto hide-scrollbar'>
+/////use this layout
+    <div className='flex justify-center items-center bg-indigo-200 p-7 rounded-xl min-w-7 w-[475px] h-[650px]'>
+        <div className='text-black p-4 bg-white
+         rounded-lg shadow-lg items-center justify-center h-[600px] sm:p-8 w-full overflow-y-auto hide-scrollbar'>
         <img
           src={profileData.image || "/profile-image.jpg"}
           alt="Profile"
-          className="w-full h-64 object-cover rounded-md mb-4"
+          className="w-full h-80 object-cover rounded-md mb-4"
         />
         <h1 className="text-2xl font-semibold mb-2 capitalize">
           {profileData.first_name || ""}

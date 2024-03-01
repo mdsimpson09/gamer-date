@@ -1,27 +1,55 @@
+
 // 'use client'
 // import React, { useState, useEffect } from 'react';
 // import Link from 'next/link';
 // import { useSession } from 'next-auth/react';
 // import UserAccountNav from './components/UserAccountNav';
 // import { usePathname } from 'next/navigation';
+// import { useRouter } from 'next/navigation'
+
 
 // const Navbar = () => {
 //   const [isMenuOpen, setIsMenuOpen] = useState(false);
 //   const { data: session } = useSession();
 //   const pathname = usePathname(); 
+//   const router = useRouter();
 
-//   const isActive = (path: string) => pathname === path ? 'bg-indigo-500 text-white p-2 rounded-full' : 'hover:bg-indigo-500 hover:text-white p-2 rounded-full ';
-//   const linkStyle = (href: string) => `block text-right mt-2 md:mt-0 cursor-pointer px-4 py-2 rounded-full transition-colors duration-200 ${pathname === href ? 'bg-indigo-500 text-white' : 'hover:bg-indigo-500 hover:text-white'}`;
+//   useEffect(() => {
+//     document.body.style.padding = '0';
+//   }, []);
+
+//   const toggleMenu = () => {
+//     setIsMenuOpen(!isMenuOpen);
+//   };
+
+
+//   const handleLinkClick = (href: string) => {
+//     toggleMenu(); 
+//     router.push(href); 
+//   };
+
+//   const isActive = (path: string) => {
+//     const active = pathname === path;
+//     return `block text-right mt-2 md:mt-0 cursor-pointer px-4 py-2 rounded-full transition-colors duration-200 ${active ? 'highlight-nav text-white custom-ring' : 'highlight text-white'} custom-ring`;
+//   };
+
+//   const linkStyle = (path: string) => {
+//     const baseStyles = "block text-right mt-2 md:mt-0 cursor-pointer px-4 py-2 rounded-full transition-colors duration-200";
+//     const activeStyles = "highlight-nav text-white ring-2 ring-#eaac8b"; 
+//     const inactiveStyles = "hover:highlight hover:text-white";
+//     return `${baseStyles} ${pathname === path ? activeStyles : inactiveStyles}`;
+//   };
 
 //   return (
-//     <div className='bg-indigo-400 border-b border-s-zinc-200 fixed w-full z-10 top-0 text-white text-lg overflow-visible'>
-//     <div className='flex items-center justify-between px-4'>
+//     <div className='nav-background border-b border-s-zinc-200 fixed w-full z-10 top-0 text-white text-lg overflow-visible'>
+//     <div className='flex items-center justify-between pr-2'>
 //       <Link href='/'>
-//         {/* Adjust the width and height as needed */}
-//         <img src="/logo.png" alt="logo" className=' w-36 h-36 cursor-pointer -mt-3 -mb-10' />
+      
+//       <img src="/logo.png" alt="logo" className='logo-small cursor-pointer' />
+
 //       </Link>
 
-//       {/* Menu button (visible only on small screens) */}
+     
 //       <button 
 //         onClick={() => setIsMenuOpen(!isMenuOpen)}
 //         className="block md:hidden"
@@ -30,20 +58,28 @@
 //       </button>
 
 //         {/* Navigation Links */}
-//         <div className={`flex-1 md:flex md:items-center md:justify-between absolute md:relative right-0 top-16 md:top-0 w-full md:w-auto bg-indigo-400 md:bg-transparent p-4 md:p-0 transition-all duration-300 ease-in-out ${isMenuOpen ? 'block' : 'hidden'} ml-12`}>
-//           <Link href='/about'><span className={`${isActive('/about')}  hover:outline p-3 rounded-full shadow-outline`}>About</span></Link>
-//           <Link href='/profile'><span className={`${isActive('/profile')}  hover:outline p-3 rounded-full shadow-outline`}>Profile</span></Link>
-//           <Link href='/meet'><span className={`${isActive('/meet')}hover:outline p-3 rounded-full shadow-outline`}>Find Players</span></Link>
-//           <Link href='/matches'><span className={`${isActive('/matches')}hover:outline p-3 rounded-full shadow-outline`}>Your Matches</span></Link>
-//           <Link href='/faqs'><span className={`${isActive('/faqs')}hover:outline p-3 rounded-full shadow-outline`}>FAQs</span></Link>
-//           <Link href='/sign-up'><span className={`${isActive('/sign-up')}hover:outline p-3 rounded-full shadow-outline`}>Sign Up</span></Link>
-          
-//           {session?.user ? (
-//             <UserAccountNav />
-//           ) : (
-//             <Link href='/login'><span className='btn block text-right mt-2 md:mt-0 cursor-pointer'>Login</span></Link>
-//           )}
-//         </div>
+//         <div className={`open-background absolute right-0 md:relative top-24 md:top-0 w-full p-4 transition-all duration-300 ease-in-out ${isMenuOpen ? 'flex' : 'hidden'} mx-auto flex-col items-center space-y-1 rounded-lg md:flex md:flex-row md:items-center md:justify-between md:p-0 md:space-x-4 md:space-y-0`}>
+  
+//   <Link href='/about' onClick={(e) => { e.preventDefault(); handleLinkClick('/about'); }}><span className={isActive('/about')}>About</span></Link>
+
+//   <Link href='/profile' onClick={(e) => { e.preventDefault(); handleLinkClick('/profile'); }}>
+//     <span className={isActive('/profile')}>Profile</span>
+//   </Link>
+
+//   <Link href='/meet' onClick={(e) => { e.preventDefault(); handleLinkClick('/meet'); }}><span className={isActive('/meet')}>Meet</span></Link>
+
+//   <Link href='/matches' onClick={(e) => { e.preventDefault(); handleLinkClick('/matches'); }}><span className={isActive('/matches')}>Matches</span></Link>
+
+//   <Link href='/faqs' onClick={(e) => { e.preventDefault(); handleLinkClick('/profile'); }}><span className={isActive('/faqs')}>FAQS</span></Link>
+
+//   <Link href='/sign-up' onClick={(e) => { e.preventDefault(); handleLinkClick('/sign-up'); }}><span className={isActive('/sign-up')}>Register</span></Link>
+  
+//   {session?.user ? (
+//     <UserAccountNav />
+//   ) : (
+//     <Link href='/login'><span className='btn block text-right mt-2 md:mt-0 cursor-pointer'>Login</span></Link>
+//   )}
+// </div>
 //       </div>
 //     </div>
 //   );
@@ -53,67 +89,68 @@
 // export default Navbar;
 
 'use client'
+
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import UserAccountNav from './components/UserAccountNav';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { data: session } = useSession();
-  const pathname = usePathname(); 
+  const pathname = usePathname();
+  const router = useRouter();
 
-  const isActive = (path: string) => {
-    // Check if the current path matches the link's path
-    const active = pathname === path;
-    return `block text-right mt-2 md:mt-0 cursor-pointer px-4 py-2 rounded-full transition-colors duration-200 ${active ? 'bg-indigo-500 text-white ring-2 ring-white' : 'hover:bg-indigo-500 hover:text-white'} hover:ring-2 hover:ring-white`;
+  useEffect(() => {
+    document.body.style.padding = '0';
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const linkStyle = (path: string) => {
-    const baseStyles = "block text-right mt-2 md:mt-0 cursor-pointer px-4 py-2 rounded-full transition-colors duration-200";
-    const activeStyles = "bg-indigo-500 text-white ring-2 ring-white"; // Add ring styles for active link
-    const inactiveStyles = "hover:bg-indigo-500 hover:text-white";
-    return `${baseStyles} ${pathname === path ? activeStyles : inactiveStyles}`;
+  const handleLinkClick = (href: string) => {
+    toggleMenu(); // Close the menu upon navigating
+    router.push(href);
+  };
+
+  const isActive = (path: string) => {
+    const active = pathname === path;
+    return `block mt-2 cursor-pointer px-4 py-2 rounded-full text-white transition-colors duration-200 ${active ? 'bg-indigo-500 text-white ring-2 ring-white' : 'hover:bg-indigo-500 hover:text-white'} hover:ring-2 hover:ring-white`;
+
   };
 
   return (
-    <div className='bg-indigo-400 border-b border-s-zinc-200 fixed w-full z-10 top-0 text-white text-lg overflow-visible'>
-    <div className='flex items-center justify-between px-4'>
+    <div className='bg-transparent fixed w-full z-10 top-0 text-lg overflow-visible '>
+      <div className='flex items-center justify-between p-4'>
       <Link href='/'>
-        {/* Adjust the width and height as needed */}
-        <img src="/logo.png" alt="logo" className=' w-36 h-36 cursor-pointer -mt-3 -mb-10' />
-      </Link>
+  <div className="flex justify-center -ml-8 w-44 h-44 -mt-6 -mb-24" style={{ borderRadius: '50%', position: 'relative' }}>
+    <img src="/logo.png" alt="Logo" className='w-auto h-36 cursor-pointer' style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} />
+  </div>
+</Link>
+        {/* Hamburger Menu Button always visible */}
+        <button onClick={toggleMenu} className="#e56b6f text-4xl">
+          {isMenuOpen ? '✕' : '☰'}
+        </button>
 
-      {/* Menu button (visible only on small screens) */}
-      <button 
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="block md:hidden"
-      >
-        Menu
-      </button>
-
-        {/* Navigation Links */}
-        <div className={`flex-1 md:flex md:items-center md:justify-between absolute md:relative right-0 top-16 md:top-0 w-full md:w-auto bg-indigo-400 md:bg-transparent p-4 md:p-0 transition-all duration-300 ease-in-out ${isMenuOpen ? 'block' : 'hidden'} ml-12`}>
-          
-        <Link href='/about'><span className={isActive('/about')}>About</span></Link>
-          <Link href='/profile'><span className={isActive('/profile')}>Profile</span></Link>
-          <Link href='/meet'><span className={isActive('/meet')}>Meet</span></Link>
-          {/* Add the rest of your links here, applying linkStyle for each */}
-          <Link href='/matches'><span className={isActive('/matches')}>Matches</span></Link>
-          <Link href='/faqs'><span className={isActive('/faqs')}>FAQS</span></Link>
-          <Link href='/sign-up'><span className={isActive('/sign-up')}>Register</span></Link>
-          
-          {session?.user ? (
-            <UserAccountNav />
-          ) : (
-            <Link href='/login'><span className='btn block text-right mt-2 md:mt-0 cursor-pointer'>Login</span></Link>
-          )}
-        </div>
+        {/* Dropdown Menu */}
+        <div className={`bg-indigo-300 w-[200px] absolute right-0 top-full mt-2 p-4 flex flex-col items-center space-y-1 shadow-md rounded-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'block' : 'hidden'}`}>
+  <Link href='/about'><span onClick={() => handleLinkClick('/about')} className={isActive('/about')}>About</span></Link>
+  <Link href='/profile'><span onClick={() => handleLinkClick('/profile')} className={isActive('/profile')}>Profile</span></Link>
+  <Link href='/meet'><span onClick={() => handleLinkClick('/meet')} className={isActive('/meet')}>Meet</span></Link>
+  <Link href='/matches'><span onClick={() => handleLinkClick('/matches')} className={isActive('/matches')}>Matches</span></Link>
+  <Link href='/faqs'><span onClick={() => handleLinkClick('/faqs')} className={isActive('/faqs')}>FAQs</span></Link>
+  <Link href='/sign-up'><span onClick={() => handleLinkClick('/sign-up')} className={isActive('/sign-up')}>Register</span></Link>
+  {session?.user ? (
+    <UserAccountNav />
+  ) : (
+    <Link href='/login'><span onClick={() => handleLinkClick('/login')} className='block mt-2 cursor-pointer'>Login</span></Link>
+  )}
+</div>
       </div>
     </div>
   );
 };
-
 
 export default Navbar;

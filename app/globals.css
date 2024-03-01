@@ -92,6 +92,45 @@
 
 }
 
-.navbar-font {
-  font-family: 'Protest Strike', cursive;
+
+.nav-button{
+  background-color:#CBF5EF
 }
+
+.nav-background{
+/* background-color: #355070; */
+background-color: #360568
+}
+
+.outter-box{
+/* background-color: #6d597a  */
+background-color: #360568
+
+}
+
+.inner-box{
+background-color:  #F9FCFB;
+}
+
+.highlight-nav{
+background-color: bg-indigo-500;
+/*  */
+}
+
+.highlight.highlight:hover  {
+  background-color: #9Ac6c5 !important;
+  box-shadow: 0 0 0 2px #A5e6ba; 
+}
+
+
+.custom-ring-active.custom-ring-active {
+  box-shadow: 0 0 0 2px #a5e6ba;
+  /* box-shadow: 0 0 0 2px #eaac8b;  */
+}
+
+
+/* Hex codes: dark blue #023E8A, medium blue #0077B6, light blue #90E0EF, pale blue #CAF0F8
+
+
+
+dark indigo #2C2C54, deep purple-gray #474787, cool gray #AAABB8, light gray #ECECEC */

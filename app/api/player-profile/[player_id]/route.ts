@@ -1,9 +1,7 @@
-
-
 //app/api/player-profile/[player_id]
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
-import React from "react";
+
 
 export async function GET( 
     request: Request, 
