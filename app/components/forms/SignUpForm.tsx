@@ -325,7 +325,7 @@ const SignUpForm = () => {
   }, [isSubmitted]);
 
   return (
-    <div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl min-w-7 w-[475px] h-[650px]'>
+    <div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl min-w-7 w-[475px] h-[650px] mt-8'>
         <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[375px] h-[550px] overflow-y-auto hide-scrollbar'>
 
     <Form {...form}>
@@ -337,9 +337,9 @@ const SignUpForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-              <input className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' placeholder="" {...field} />
+              <input className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-2' placeholder="" {...field} />
               </FormControl>
-              <FormLabel>First Name:</FormLabel>
+              <FormLabel className="text-md small:text-md">First Name:</FormLabel>
               <FormMessage />
             </FormItem>
             
@@ -351,9 +351,9 @@ const SignUpForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <input className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' placeholder="" {...field} />
+                <input className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-2' placeholder="" {...field} />
               </FormControl>
-              <FormLabel>Last Name:</FormLabel>
+              <FormLabel className="text-md small:text-md">Last Name:</FormLabel>
               <FormMessage />
             </FormItem>
             
@@ -365,9 +365,9 @@ const SignUpForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-              <input className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' placeholder="" {...field} />
+              <input className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-2' placeholder="" {...field} />
               </FormControl>
-              <FormLabel>Username:</FormLabel>
+              <FormLabel className="text-md small:text-md">Username:</FormLabel>
               <FormMessage />
             </FormItem>
             
@@ -380,9 +380,9 @@ const SignUpForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-              <input className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' placeholder="" {...field} />
+              <input className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-2' placeholder="" {...field} />
               </FormControl>
-              <FormLabel>Email:</FormLabel>
+              <FormLabel className="text-md small:text-md">Email:</FormLabel>
               <FormMessage />
             </FormItem>
             
@@ -396,9 +396,9 @@ const SignUpForm = () => {
               <FormControl>
               <input 
               type= "password"
-              className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' placeholder="" {...field} />
+              className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-2' placeholder="" {...field} />
               </FormControl>
-              <FormLabel>Password:</FormLabel>
+              <FormLabel className="text-md small:text-md">Password:</FormLabel>
               <FormMessage />
             </FormItem>
             
@@ -412,9 +412,9 @@ const SignUpForm = () => {
               <FormControl>
               <input 
               type= "password"
-              className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' placeholder="" {...field} />
+              className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-2' placeholder="" {...field} />
               </FormControl>
-              <FormLabel>Re-Enter your password</FormLabel>
+              <FormLabel className="text-md small:text-md">Re-Enter your password</FormLabel>
               <FormMessage />
             </FormItem>
             
@@ -429,19 +429,19 @@ const SignUpForm = () => {
                   <FormControl>
                     <input 
                       type="text" 
-                      className='border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' 
+                      className='border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-2' 
                       placeholder="Image URL" 
                       {...field} 
                     />
                   </FormControl>
-                  <FormLabel>Profile Image:</FormLabel>
+                  <FormLabel className="text-md small:text-md">Profile Image:</FormLabel>
                   <FormMessage />
                 </FormItem>
               )}
             />
         <br></br>
       </div>
-        <Button className='w-full bg-indigo-500 text-white' type="submit">Register</Button>
+      <Button variant="contained" className='w-full bg-indigo-500 text-white' type="submit">Register</Button>
       </form>
       <div className='mx-auto my-4 flex w-full items-center justify-evenly before:mr-4 before:block before:h-px before:flex-grow before:bg-stone-400 after:ml-4 after:bloack after:h-px after:flex-grow after:bg-stone-400'>
        or

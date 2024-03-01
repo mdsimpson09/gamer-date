@@ -13,7 +13,7 @@ async function MeetPage() {
     if (session?.user) {
   return (
     <div >
-      <div >
+      <div className="mt-6">
       <Meet />
       </div>
     <div>
@@ -23,7 +23,7 @@ async function MeetPage() {
     </div>
   )}
   return (
-    <h2>Please 
+    <h2 className="mt-24">Please 
         <Link className='text-blue-500 hover:underline' href= '/login'> login </Link> 
         to see other players!  </h2>
   )

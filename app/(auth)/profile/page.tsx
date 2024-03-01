@@ -2,9 +2,10 @@ import React from 'react'
 import Profile from '@/app/components/profile/Profile';
 import { getServerSession } from 'next-auth';
 // import { authOptions } from "../../../lib/auth";
+import Button from '@mui/material/Button';
 import { authOptions } from "@/lib/auth";
 import Link from 'next/link';
-import { Button } from '@radix-ui/themes';
+// import { Button } from '@radix-ui/themes';
 
 interface ProfileProps {
   player: {
@@ -50,16 +51,24 @@ async function ProfilePage() {
     <br></br>
     {/* Wrap the button in a div with Flexbox styling */}
     <div className='flex justify-center'>
-        <Button > 
+        {/* <Button > 
             <Link href="/edit">Edit Profile</Link>
-        </Button>
+        </Button> */}
+        <Button variant="contained" className='w-full bg-indigo-500 text-white'>
+        <Link href="/edit">Make your profile cooler!</Link>
+       </Button>
     </div>
 </div>
   )}
   return (
-    <h2>Please 
+    <div className="mt-32 text-center text-1xl">
+    <h2>Hey! 
+      <br></br>
+      <br></br>
+      You need to 
         <Link className='text-blue-500 hover:underline' href= '/login'> login </Link> 
-        to see and edit your profile page </h2>
+        to see and edit your profile page! </h2>
+        </div>
   )
 }
 

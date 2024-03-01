@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
 
  
 @layer base {
@@ -80,7 +80,21 @@
 @responsive {
   body {
     @apply p-0.5; /* Add padding to the body for better readability */
+    font-family: 'Zen Maru Gothic', sans-serif;
+
   }
+/* 
+  h1, h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  ul{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+  } */
+
   .hide-scrollbar {
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none;  /* For Internet Explorer and Edge */
@@ -132,9 +146,3 @@ background-color: bg-indigo-500;
   /* box-shadow: 0 0 0 2px #eaac8b;  */
 }
 
-
-/* Hex codes: dark blue #023E8A, medium blue #0077B6, light blue #90E0EF, pale blue #CAF0F8
-
-
-
-dark indigo #2C2C54, deep purple-gray #474787, cool gray #AAABB8, light gray #ECECEC */

@@ -17,7 +17,7 @@ interface CustomUser {
 
 async function MatchPage() {
   const session = await getServerSession(authOptions);
-  // console.log(session);
+ 
   const player_id = (session?.user as CustomUser)?.id as number;
   const username = (session?.user as CustomUser)?.username;
   if (session?.user) {
@@ -29,7 +29,7 @@ async function MatchPage() {
     );
   }
   return (
-    <h2>
+    <h2 className="mt-24">
       Please
       <Link className="text-blue-500 hover:underline" href="/login">
         {" "}

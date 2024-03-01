@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react'
 import { NextRequest, NextResponse } from 'next/server';
-
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '../ui/form';
 import Button from '@mui/material/Button';
@@ -64,7 +63,7 @@ const LogInForm = () => {
   }
 
   return (
-    <div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl min-w-7 w-[475px] h-[650px]'>
+    <div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl min-w-7 w-[475px] h-[650px] mt-8'>
     <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[375px] h-[550px] overflow-y-auto hide-scrollbar'>
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>

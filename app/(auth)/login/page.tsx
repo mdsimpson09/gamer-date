@@ -3,7 +3,7 @@ import LogInForm from "../../components/forms/LogInForm";
 
 const login = () => {
   return (
-    <div>
+    <div className="mt-4">
       <LogInForm />
     </div>
   )

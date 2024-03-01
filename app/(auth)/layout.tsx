@@ -1,3 +1,4 @@
+//(auth)/layout
 import React, { FC, ReactNode } from 'react'
 
 

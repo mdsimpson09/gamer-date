@@ -42,7 +42,7 @@ const UserProfilePage: React.FC = () => {
     if (url) {
       window.open(url, '_blank');
     } else {
-      // Handle the case where the URL is null (e.g., show a notification or tooltip)
+     
       console.log("This service is not linked.");
       toast({
         title: 'Uh oh!',
@@ -55,8 +55,8 @@ const UserProfilePage: React.FC = () => {
 
 
   useEffect(() => {
-    // Extract player ID from pathname
-    const player_id = pathname.split('/')[2]; // Adjust according to your URL structure
+   
+    const player_id = pathname.split('/')[2]; 
 
     if (player_id) {
       fetch(`/api/player-profile/${player_id}`)
@@ -73,7 +73,7 @@ const UserProfilePage: React.FC = () => {
   }
 
   return (
-<div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl min-w-7 w-[475px] h-[700px]'>
+<div className='flex justify-center items-center bg-indigo-300 p-10 rounded-xl min-w-7 w-[475px] h-[700px]'>
       <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[500px] h-[600px] overflow-y-auto hide-scrollbar'>
         <div className="flex justify-center items-center ">
           <img

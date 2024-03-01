@@ -104,13 +104,13 @@ const Meet: React.FC = () => {
         }
         const data = await response.json();
         if (data.message === "Out of player profiles. Check back later for more") {
-          setProfileData(null); // No more profiles available
+          setProfileData(null); 
         } else {
           setProfileData(data.player);
         }
       } catch (error) {
         console.error('Error fetching profile data:', error);
-        setProfileData(null); // Handle fetch error or no data
+        setProfileData(null); 
       }
     };
 

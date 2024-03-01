@@ -22,7 +22,7 @@ async function signup() {
 
   if (session?.user) {
 return (
-  <div>
+  <div className="mt-28">
  <p>You are already logged in!</p>
   <br></br>
   {/* Wrap the button in a div with Flexbox styling */}

@@ -86,9 +86,9 @@ const AboutPage = () => {
         <section className="how-it-works-section">
         <h4 className="sm:text-2xl text-center mb-8 font-bold"> Be sure to read the community standards</h4>
           <p>
-            Read the Community Standards <Link href="/faqs"> here. </Link>
+            Read the Community Standards <Link href="/faqs" className="text-lg text-indigo-400"> here. </Link>
           </p>
-          {/* Add more content and visuals here */}
+   
         </section>
       </div>
     </div>
