@@ -27,7 +27,7 @@ export default function RootLayout({
       <head> 
         <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet" />
         
-      <body className=" mt-36 justify-center items-center h-screen pt-36">
+        <body className="mt-36 justify-center items-center h-screen pt-36">
         <SessionProvider>
         <Theme>
         <NavBar />

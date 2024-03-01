@@ -91,7 +91,11 @@
   }
 
 }
-
+@media (max-width: 640px) {
+  .custom-container {
+    padding: 2rem; /* Example of reducing padding on smaller screens */
+  }
+}
 
 .nav-button{
   background-color:#CBF5EF

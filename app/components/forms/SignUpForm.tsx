@@ -243,7 +243,8 @@
 import React, { useEffect, useState } from 'react'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '../ui/form';
-import { Button } from '@radix-ui/themes';
+// import { Button } from '@radix-ui/themes';
+import Button from '@mui/material/Button';
 import { Input } from "../ui/input";
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -335,10 +336,10 @@ const SignUpForm = () => {
           name="first_name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>First Name:</FormLabel>
               <FormControl>
-              <input className= 'border indigo-200 rounded-sm flex w-full items-center justify-evenly' placeholder="" {...field} />
+              <input className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' placeholder="" {...field} />
               </FormControl>
+              <FormLabel>First Name:</FormLabel>
               <FormMessage />
             </FormItem>
             
@@ -349,10 +350,10 @@ const SignUpForm = () => {
           name="last_name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Last Name:</FormLabel>
               <FormControl>
-                <input className= 'border indigo-200 rounded-sm flex w-full items-center justify-evenly' placeholder="" {...field} />
+                <input className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' placeholder="" {...field} />
               </FormControl>
+              <FormLabel>Last Name:</FormLabel>
               <FormMessage />
             </FormItem>
             
@@ -363,10 +364,10 @@ const SignUpForm = () => {
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username:</FormLabel>
               <FormControl>
-              <input className= 'border indigo-200 rounded-sm flex w-full items-center justify-evenly' placeholder="" {...field} />
+              <input className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' placeholder="" {...field} />
               </FormControl>
+              <FormLabel>Username:</FormLabel>
               <FormMessage />
             </FormItem>
             
@@ -378,10 +379,10 @@ const SignUpForm = () => {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email:</FormLabel>
               <FormControl>
-              <input className= 'border indigo-200 rounded-sm flex w-full items-center justify-evenly' placeholder="" {...field} />
+              <input className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' placeholder="" {...field} />
               </FormControl>
+              <FormLabel>Email:</FormLabel>
               <FormMessage />
             </FormItem>
             
@@ -392,12 +393,12 @@ const SignUpForm = () => {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Password:</FormLabel>
               <FormControl>
               <input 
               type= "password"
-              className= 'border indigo-200 rounded-sm flex w-full items-center justify-evenly' placeholder="" {...field} />
+              className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' placeholder="" {...field} />
               </FormControl>
+              <FormLabel>Password:</FormLabel>
               <FormMessage />
             </FormItem>
             
@@ -408,12 +409,12 @@ const SignUpForm = () => {
           name="confirmPassword"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Re-Enter your password</FormLabel>
               <FormControl>
               <input 
               type= "password"
-              className= 'border indigo-200 rounded-sm flex w-full items-center justify-evenly' placeholder="" {...field} />
+              className= 'border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' placeholder="" {...field} />
               </FormControl>
+              <FormLabel>Re-Enter your password</FormLabel>
               <FormMessage />
             </FormItem>
             
@@ -424,22 +425,23 @@ const SignUpForm = () => {
               name="image"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Profile Image:</FormLabel>
+          
                   <FormControl>
                     <input 
                       type="text" 
-                      className='border border-indigo-200 rounded-md w-full p-2' 
+                      className='border-0 border-b border-indigo-500 focus:border-b-2 focus:outline-none w-full py-1' 
                       placeholder="Image URL" 
                       {...field} 
                     />
                   </FormControl>
+                  <FormLabel>Profile Image:</FormLabel>
                   <FormMessage />
                 </FormItem>
               )}
             />
         <br></br>
       </div>
-        <Button className='w-full' type="submit">Register</Button>
+        <Button className='w-full bg-indigo-500 text-white' type="submit">Register</Button>
       </form>
       <div className='mx-auto my-4 flex w-full items-center justify-evenly before:mr-4 before:block before:h-px before:flex-grow before:bg-stone-400 after:ml-4 after:bloack after:h-px after:flex-grow after:bg-stone-400'>
        or

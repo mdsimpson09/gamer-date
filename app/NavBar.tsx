@@ -135,7 +135,7 @@ const Navbar = () => {
         </button>
 
         {/* Dropdown Menu */}
-        <div className={`bg-indigo-300 w-[200px] absolute right-0 top-full mt-2 p-4 flex flex-col items-center space-y-1 shadow-md rounded-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'block' : 'hidden'}`}>
+        <div className={`bg-indigo-300 w-[200px] absolute right-0 top-full -mt-4 p-4 flex flex-col items-center space-y-1 shadow-md rounded-lg transition-all duration-300 ease-in-out ${isMenuOpen ? 'block' : 'hidden'}`}>
   <Link href='/about'><span onClick={() => handleLinkClick('/about')} className={isActive('/about')}>About</span></Link>
   <Link href='/profile'><span onClick={() => handleLinkClick('/profile')} className={isActive('/profile')}>Profile</span></Link>
   <Link href='/meet'><span onClick={() => handleLinkClick('/meet')} className={isActive('/meet')}>Meet</span></Link>
