@@ -1,11 +1,10 @@
 import React from 'react'
 import Profile from '@/app/components/profile/Profile';
 import { getServerSession } from 'next-auth';
-// import { authOptions } from "../../../lib/auth";
 import Button from '@mui/material/Button';
 import { authOptions } from "@/lib/auth";
 import Link from 'next/link';
-// import { Button } from '@radix-ui/themes';
+
 
 interface ProfileProps {
   player: {
