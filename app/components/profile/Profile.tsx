@@ -75,11 +75,11 @@ const Profile: React.FC<ProfileProps> = ({ player }) => {
 
   return (
 /////use this layout
-/* <div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl min-w-7 w-[455px] h-[650px]'>
-<div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[400px] h-[600px] overflow-y-auto hide-scrollbar'> */
+<div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl min-w-7 w-[455px] h-[650px]'>
+<div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[400px] h-[600px] overflow-y-auto hide-scrollbar'> 
 
-<div className='flex justify-center items-center bg-indigo-300 p-10 rounded-xl min-w-7 w-[475px] h-[650px]'>
-        <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[375px] h-[550px] overflow-y-auto hide-scrollbar'>
+{/* <div className='flex justify-center items-center bg-indigo-300 p-10 rounded-xl min-w-7 w-[475px] h-[650px]'>
+        <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[375px] h-[550px] overflow-y-auto hide-scrollbar'> */}
         <img
           src={profileData.image || "/profile-image.jpg"}
           alt="Profile"
