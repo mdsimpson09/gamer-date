@@ -75,9 +75,8 @@ const Profile: React.FC<ProfileProps> = ({ player }) => {
 
   return (
 /////use this layout
-<div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl min-w-7 w-[455px] h-[650px]'>
-<div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[400px] h-[600px] overflow-y-auto hide-scrollbar'> 
-
+<div className=' container flex justify-center items-center bg-indigo-300 p-5 md:p-10 rounded-xl w-full max-w-xs md:max-w-lg h-auto mb-0 max-h-[600px] md:max-h-[700px] lg:max-w-[500px] min-w-7'>
+<div className='max-w-3xl py-4 px-4 md:py-6 md:px-6 bg-white shadow-md rounded-md my-8 w-full h-auto overflow-y-auto hide-scrollbar max-h-[500px] md:max-h-[550px] lg:max-w-[400px]'> 
 {/* <div className='flex justify-center items-center bg-indigo-300 p-10 rounded-xl min-w-7 w-[475px] h-[650px]'>
         <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[375px] h-[550px] overflow-y-auto hide-scrollbar'> */}
         <img
@@ -105,28 +104,28 @@ const Profile: React.FC<ProfileProps> = ({ player }) => {
        <h1 className="text-xl font-bold mb-4">Where players can connect with you!</h1>
         <ul className="flex list-none p-0 justify-between">
           <li className="mr-4" onClick={() => navigateToLink(player.twitch)}>
-            <div className="flex items-center justify-center bg-purple-700 rounded-lg cursor-pointer" style={{ width: '40px', height: '40px' }}>
-              <FaTwitch className='text-white text-2xl'/>
+            <div className="flex items-center justify-center bg-purple-700 rounded-lg cursor-pointer" style={{ width: '36px', height: '36px' }}>
+              <FaTwitch className='text-white text-xl'/>
             </div>
           </li>
           <li className="mr-4" onClick={() => navigateToLink(player.discord)}>
-            <div className="flex items-center justify-center bg-indigo-400 rounded-lg cursor-pointer" style={{ width: '40px', height: '40px' }}>
-              <FaDiscord className="text-white text-2xl" />
+            <div className="flex items-center justify-center bg-indigo-400 rounded-lg cursor-pointer" style={{ width: '36px', height: '36px' }}>
+              <FaDiscord className="text-white text-xl" />
             </div>
           </li>
           <li className="mr-4" onClick={() => navigateToLink(player.instagram)}>
-            <div className="flex items-center justify-center bg-pink-600 rounded-lg cursor-pointer" style={{ width: '40px', height: '40px' }}>
-              <FaInstagram className="text-white text-2xl" />
+            <div className="flex items-center justify-center bg-pink-600 rounded-lg cursor-pointer" style={{ width: '36px', height: '36px' }}>
+              <FaInstagram className="text-white text-xl" />
             </div>
           </li>
           <li className="mr-4" onClick={() => navigateToLink(player.twitter)}>
-            <div className="flex items-center justify-center bg-blue-500 rounded-lg cursor-pointer" style={{ width: '40px', height: '40px' }}>
-              <FaXTwitter className="text-white text-2xl" />
+            <div className="flex items-center justify-center bg-blue-500 rounded-lg cursor-pointer" style={{ width: '36px', height: '36px' }}>
+              <FaXTwitter className="text-white text-xl" />
             </div>
           </li>
           <li onClick={() => navigateToLink(player.facebook)}>
-            <div className="flex items-center justify-center bg-blue-600 rounded-full cursor-pointer" style={{ width: '40px', height: '40px' }}>
-              <FaFacebook className="text-white text-2xl" />
+            <div className="flex items-center justify-center bg-blue-600 rounded-full cursor-pointer" style={{ width: '36px', height: '36px' }}>
+              <FaFacebook className="text-white text-xl" />
             </div>
           </li>
         </ul>
