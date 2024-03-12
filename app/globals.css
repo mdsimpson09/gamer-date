@@ -79,7 +79,7 @@
 
 @responsive {
   body {
-    @apply p-0.5; /* Add padding to the body for better readability */
+    @apply p-1; /* Add padding to the body for better readability */
     font-family: 'Zen Maru Gothic', sans-serif;
 
   }
@@ -107,7 +107,7 @@
 }
 @media (max-width: 640px) {
   .custom-container {
-    padding: 2rem; /* Example of reducing padding on smaller screens */
+    padding: 2rem; 
   }
 }
 
@@ -128,6 +128,10 @@ background-color: #360568
 
 .inner-box{
 background-color:  #F9FCFB;
+}
+
+.layout-background{
+background-color: rgb(249, 247, 255);
 }
 
 .highlight-nav{

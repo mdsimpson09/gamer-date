@@ -35,45 +35,65 @@ const MeetControls: React.FC<MeetProps> = ({ player, toggleRefresh }) => {
     return null;
   }
 
-  return (
-    <div className="ml-16">
-    <div className="container flex items-center py-2 space-x-4 ">
-      <div
-        onClick={toggleRefresh}
-        className="font-bold text-3xl rounded-full bg-red-500 w-24 h-24 hover:bg-red-600 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center"
-      >
-        <DislikeButton playerIdToDislike={player?.player_id} />
-      </div>
+//   return (
+//     <div className="ml-16">
+//     <div className="container flex items-center py-2 space-x-4 ">
+//       <div
+//         onClick={toggleRefresh}
+//         className="font-bold text-3xl rounded-full bg-red-500 w-24 h-24 hover:bg-red-600 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center"
+//       >
+//         <DislikeButton playerIdToDislike={player?.player_id} />
+//       </div>
 
-      {/* <div
-        onClick={toggleRefresh}
-        className="font-bold text-3xl rounded-full bg-blue-400 w-16 h-16 text-white hover:bg-blue-500 focus:outline-none focus:ring focus:ring-green-400 focus:ring-opacity-50 shadow-lg flex items-center justify-center"
-      >
-        <IconButton className="flex items-center justify-center">
-          <RedoIcon className="text-gray-50" />
+//       <div className="font-bold text-2xl rounded-full bg-blue-400 w-20 h-20 text-white hover:bg-blue-500 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center">
+//         <Link href="/">
+//           <IconButton>
+//             <ExitIcon className="text-gray-50" />
+//           </IconButton>
+//         </Link>
+//       </div>
+
+//       <div
+//         onClick={toggleRefresh}
+//         className="font-bold text-3xl rounded-full bg-green-500 w-24 h-24 hover:bg-green-600 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center"
+//       >
+//         <LikeButton playerIdTolike={player?.player_id} />
+//       </div>
+//     </div>
+//     </div>
+//   );
+// }
+
+
+
+
+// export default MeetControls;
+return (
+<div className="items-center ml-3 md:ml-14 lg:ml-14">
+  <div className="-mt-12 container flex items-center py-2 space-x-4 sm:space-x-3 md:space-x-6">
+    <div
+      onClick={toggleRefresh}
+      className="outline-white font-bold text-2xl sm:text-2xl md:text-3xl rounded-full bg-red-500 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 hover:bg-red-600 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center ring-2 ring-white"
+    >
+      <DislikeButton playerIdToDislike={player?.player_id} />
+    </div>
+
+    <div className="font-bold text-xl sm:text-xl md:text-2xl rounded-full bg-blue-400 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 text-white hover:bg-blue-500 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center ring-2 ring-white">
+      <Link href="/">
+        <IconButton>
+          <ExitIcon className="text-gray-50" />
         </IconButton>
-      </div> */}
-
-      <div className="font-bold text-2xl rounded-full bg-blue-400 w-20 h-20 text-white hover:bg-blue-500 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center">
-        <Link href="/">
-          <IconButton>
-            <ExitIcon className="text-gray-50" />
-          </IconButton>
-        </Link>
-      </div>
-
-      <div
-        onClick={toggleRefresh}
-        className="font-bold text-3xl rounded-full bg-green-500 w-24 h-24 hover:bg-green-600 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center"
-      >
-        <LikeButton playerIdTolike={player?.player_id} />
-      </div>
+      </Link>
     </div>
+
+    <div
+      onClick={toggleRefresh}
+      className="font-bold text-xl sm:text-2xl md:text-3xl rounded-full bg-green-500 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 hover:bg-green-600 focus:outline-none focus:ring-opacity-50 shadow-lg flex items-center justify-center ring-2 ring-white"
+    >
+      <LikeButton playerIdTolike={player?.player_id} />
     </div>
-  );
+  </div>
+</div>
+);
 }
-
-
-
-
 export default MeetControls;

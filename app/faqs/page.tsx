@@ -2,8 +2,8 @@ import React from 'react';
 
 const faqs = () => {
   return (
-    <div className='text-black p-4 text-box rounded-lg shadow-lg items-center justify-center sm:p-8 w-full '>
-    <div className='text-lg bg-white p-4 rounded-lg shadow-lg'>
+<div className='flex justify-center items-center bg-indigo-200 p-5 sm:ml-2 sm:mr-2 sm:p-8 md:p-8 md:mr-2 md:ml-2 rounded-xl mx-auto w-full sm:w-3/4 sm:py-10 lg:min-h-[75vh]'>
+      <div className='py-6 px-4 sm:px-6 bg-white shadow-md rounded-md overflow-y-auto hide-scrollbar w-full my-8'>
     <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-8 font-bold">Community Standards</h3>
       <div className="bg-indigo-50 p-4 sm:p-6 rounded-lg shadow-lg">
       <ul className="list-disc ml-4 text-base sm:text-lg mb-4">

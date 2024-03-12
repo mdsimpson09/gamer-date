@@ -122,7 +122,7 @@ const Meet: React.FC = () => {
       <div className="flex justify-center items-center h-screen">
         <SlGameController className="text-indigo-400 text-9xl animate-spin-slow" />
         <h1 className="text-lg">
-          That&apos;s all for now! We&apos;re searching for more players! 
+          {/* That&apos;s all for now! We&apos;re searching for more players!  */}
         </h1>
         <br></br>
         <div>
@@ -137,7 +137,7 @@ const Meet: React.FC = () => {
       <div>
       <MeetUI player={profileData} toggleRefresh={handleToggleRefresh} />
       </div>
-      <div className="mt-.5">
+      <div className="">
       <MeetControls player={profileData} toggleRefresh={handleToggleRefresh}/>
     </div>
 

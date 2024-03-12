@@ -73,8 +73,11 @@ const UserProfilePage: React.FC = () => {
   }
 
   return (
-<div className='flex justify-center items-center bg-indigo-300 p-10 rounded-xl min-w-7 w-[475px] h-[700px]'>
-      <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[500px] h-[600px] overflow-y-auto hide-scrollbar'>
+    <div className=' container flex justify-center items-center bg-indigo-300 p-5 md:p-10 rounded-xl w-full max-w-xs md:max-w-lg h-auto mb-0 max-h-[600px] md:max-h-[700px] lg:max-w-[500px] min-w-7'>
+<div className='max-w-3xl py-4 px-4 md:py-6 md:px-6 bg-white shadow-md rounded-md my-8 w-full h-auto overflow-y-auto hide-scrollbar max-h-[500px] md:max-h-[550px] lg:max-w-[400px]'> 
+{/* <div className='flex justify-center items-center bg-indigo-300 p-10 rounded-xl min-w-7 w-[475px] h-[700px]'>
+      <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[500px] h-[600px] overflow-y-auto hide-scrollbar'> */}
+      
         <div className="flex justify-center items-center ">
           <img
             src={userProfile.image || "/profile-image.jpg"}
