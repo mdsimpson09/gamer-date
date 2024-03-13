@@ -126,7 +126,7 @@ const Meet: React.FC = () => {
         </h1>
         <br></br>
         <div>
-      <SlGameController className="text-indigo-400 text-9xl animate-spin-slow" />
+      {/* <SlGameController className="text-indigo-400 text-9xl animate-spin-slow" /> */}
       </div>
     </div>
     );
