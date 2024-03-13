@@ -69,7 +69,7 @@ const MeetControls: React.FC<MeetProps> = ({ player, toggleRefresh }) => {
 
 // export default MeetControls;
 return (
-<div className="items-center ml-3 md:ml-14 lg:ml-14">
+<div className="items-center ml-6 md:ml-16 lg:ml-14">
   <div className="-mt-12 container flex items-center py-2 space-x-4 sm:space-x-3 md:space-x-6">
     <div
       onClick={toggleRefresh}
