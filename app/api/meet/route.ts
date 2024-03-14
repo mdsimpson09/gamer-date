@@ -6,7 +6,7 @@ import { authOptions } from '@/lib/auth';
 import { Session } from 'next-auth';
 import DislikeButton from '@/app/components/profile/dislike-button';
 
-// const prisma = new PrismaClient();
+const prisma = new PrismaClient();
 
 
 export async function GET(req: NextRequest, res: NextResponse) {
