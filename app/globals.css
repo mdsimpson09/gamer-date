@@ -100,16 +100,21 @@
 
   }
 
+  @font-face {
+    font-family: 'Gamestation Condensed';
+    src: url('/fonts/gamestation-condensed.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .gamestation-text {
+    font-family: 'Gamestation Condensed', sans-serif;
+  }
+
   .navfont{
     font-family: 'Roboto', sans-serif;
 
   }
-
-  /* h4 {
-    font-family: 'Playfair Display', serif;
-  
-    text-transform: uppercase;
-  } */
 
   h5 {
     font-family: 'Playfair Display', serif;
