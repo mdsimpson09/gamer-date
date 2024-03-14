@@ -3,11 +3,9 @@
 import { getSession } from 'next-auth/react';
 import { NextRequest, NextResponse } from 'next/server';
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 import { PrismaClient } from '@prisma/client';
 
-
-// const prisma = new PrismaClient();
+const prisma = new PrismaClient();
 
 async function findAndStoreMatches(): Promise<void> {
   // Fetch all liked profiles
