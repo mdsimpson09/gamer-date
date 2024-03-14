@@ -130,7 +130,7 @@ const Navbar = () => {
   </div>
 </Link>
         {/* Hamburger Menu Button always visible */}
-        <button onClick={toggleMenu} className="#e56b6f text-4xl">
+        <button onClick={toggleMenu} className="text-4xl">
           {isMenuOpen ? '✕' : '☰'}
         </button>
 

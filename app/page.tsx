@@ -11,33 +11,6 @@ export default async function Home() {
  
 
   return (
-    
-
-   
-        
-//     <main>
-//  <div className='flex justify-center items-center bg-indigo-200 p-5 sm:p-10 rounded-xl mx-auto w-full sm:w-3/4 lg:min-h-[75vh]'>
-//       <div className='py-6 px-4 sm:px-6 bg-white shadow-md rounded-md overflow-y-auto hide-scrollbar w-full my-8'>
-//       <img  className ='flex flex-col justify-left items-left h-25 w-25' src= "/logo.png" alt="logo"  /> 
-//       <br></br>
-
-//       <h1 className='flex flex-col justify-center items-center text-4xl'>Hello! Welcome to Gamer Date!</h1>
-//       <div className='flex flex-col justify-center items-center'>
-//       <br></br>
-//       <br></br>
-//         <p>Check out your profile by clicking the button below</p>
-//         <br></br>
-//         <br></br>
-//         <br></br>
-
-//       <Button ><Link href="/profile">View Profile</Link></Button>
-//       <br></br>
-//       <br></br>
-
-//       </div>
-//     </div>
-//     </div>
-//     </main>
 
 <div>
 
