@@ -144,7 +144,7 @@ const EditForm = () => {
               control={form.control}
               name="favorite_games"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className='mt-2'>
                   <FormLabel>Favorite Games:</FormLabel>
                   <FormControl>
                     <textarea 
@@ -162,7 +162,7 @@ const EditForm = () => {
               control={form.control}
               name="favorite_device"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className='mt-2'>
                   <FormLabel>Preferred Gaming Device:</FormLabel>
                   <FormControl>
                     <textarea 
@@ -180,7 +180,7 @@ const EditForm = () => {
               control={form.control}
               name="looking_for"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className='mt-2'>
                   <FormLabel>Looking For:</FormLabel>
                   <FormControl>
                     <textarea 
@@ -198,7 +198,7 @@ const EditForm = () => {
               control={form.control}
               name="instagram"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className='mt-2'>
                   <FormLabel>Instagram:</FormLabel>
                   <FormControl>
                   <input 
@@ -217,7 +217,7 @@ const EditForm = () => {
               control={form.control}
               name="discord"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className='mt-2'>
                   <FormLabel>Discord:</FormLabel>
                   <FormControl>
                   <input 
@@ -236,7 +236,7 @@ const EditForm = () => {
               control={form.control}
               name="twitch"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className='mt-2'>
                   <FormLabel>Twitch:</FormLabel>
                   <FormControl>
                   <input 
@@ -255,7 +255,7 @@ const EditForm = () => {
               control={form.control}
               name="facebook"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className='mt-2'>
                   <FormLabel>Facebook:</FormLabel>
                   <FormControl>
                   <input 
@@ -274,7 +274,7 @@ const EditForm = () => {
               control={form.control}
               name="twitter"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className='mt-2'>
                   <FormLabel>X:</FormLabel>
                   <FormControl>
                   <input 
@@ -293,7 +293,7 @@ const EditForm = () => {
               control={form.control}
               name="image"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className='mt-2'>
                   <FormLabel>Profile Image:</FormLabel>
                   <FormControl>
                     <input 

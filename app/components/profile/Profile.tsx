@@ -84,24 +84,26 @@ const Profile: React.FC<ProfileProps> = ({ player }) => {
           alt="Profile"
           className="w-full h-80 object-cover rounded-md mb-4"
         />
-        <h1 className="text-2xl font-semibold mb-2 capitalize">
+        <h5 className="text-2xl md:text-2xl font-semibold mb-2 capitalize">
           {profileData.first_name || ""}
-        </h1>
-        <p className="text-gray-500 mb-4">{profileData.username || ""}</p>
-        <p className="text-gray-700 font-bold capitalize"> About Me: </p>
+        </h5>
+        <h6 className="text-gray-500 mb-6 capitalize">{profileData.username || ""}</h6>
+        <h4 className="text-gray-700 font-bold capitalize"> About Me: </h4>
         <p> {profileData.bio || ""}</p>
         <br></br>
-        <p className="text-gray-700 font-bold capitalize"> I&apos;m looking for:</p>
+        <h4 className="text-gray-700 font-bold capitalize"> I&apos;m looking for:</h4>
         <p className="text-gray-700">{profileData.looking_for || ""}</p>
         <br></br>
-        <p className="text-gray-700 font-bold capitalize"> My Favorite Games: </p>
+        <h4 className="text-gray-700 font-bold capitalize"> My Favorite Games: </h4>
         <p> {profileData.favorite_games || ""}</p>
         <br></br>
-        <p className="text-gray-700 font-bold capitalize"> How I Play: </p>
+        <h4 className="text-gray-700 font-bold capitalize"> How I Play: </h4>
         <p> {profileData.favorite_device || ""}</p>
         <br></br>
     
-       <h1 className="text-xl font-bold mb-4">Where players can connect with you!</h1>
+        <h4 className="font-bold mb-4 text-center sm:text-lg md:text-xl lg:text-2xl">Where players can connect with you!</h4>
+
+
         <ul className="flex list-none p-0 justify-between">
           <li className="mr-4" onClick={() => navigateToLink(player.twitch)}>
             <div className="flex items-center justify-center bg-purple-700 rounded-lg cursor-pointer" style={{ width: '36px', height: '36px' }}>

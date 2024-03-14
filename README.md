@@ -38,8 +38,6 @@ Creation of DislikedProfile, LikedProfile, and MatchedProfile tables to manage u
 
 Implementation of unique indexes and foreign key constraints to ensure data integrity and support complex queries.
 
-Singleton Pattern for Prisma Client:
-To optimize database connection management, especially during development, a singleton pattern was used for the Prisma client instance.
 
 # Nextjs 
 Nextjs was used to create the application due to its simplicity, flexibility, and the strong support it offers for server-side rendering and static site generation. Its built-in features like route pre-fetching significantly enhance user experience by improving load times. It's funded and maintained by Vercel, which ensures top-notch reliability and ease of deployment, coupled with extensive documentation and a large developer community. These qualities make it an ideal framework for our fast-paced development cycle and for achieving easy production deployments.

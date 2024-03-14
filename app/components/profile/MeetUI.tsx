@@ -48,22 +48,22 @@ const MeetUI: React.FC<MeetProps> = ({ player }) => {
       alt="Profile"
       className="w-full h-40 md:h-64 object-cover rounded-md mb-4"
     />
-    <h1 className="text-xl md:text-2xl font-semibold mb-2 capitalize">
+    <h5 className="text-2xl md:text-2xl font-semibold mb-2 capitalize">
       {player.first_name || ""}
-    </h1>
-    <p className="text-gray-500 mb-4">{player.username || ""}</p>
-    <p className="text-gray-700 font-bold capitalize"> about me: </p>
+    </h5>
+    <h6 className="text-gray-500 mb-6 capitalize">{player.username || ""}</h6>
+    <h4 className="text-gray-700 font-bold capitalize"> about me: </h4>
     <p>{player.bio || ""}</p>
     <br />
 
-    <p className="text-gray-700 font-bold capitalize"> I'm looking for:</p>
+    <h4 className="text-gray-700 font-bold capitalize"> I'm looking for:</h4>
     <p className="text-gray-700">{player.looking_for || ""}</p>
     <br />
-    <p className="text-gray-700 font-bold capitalize"> My Favorite Games: </p>
+    <h4 className="text-gray-700 font-bold capitalize"> My Favorite Games: </h4>
     <p>{player.favorite_games || ""}</p>
     <br></br>
-    <p className="text-gray-700 font-bold capitalize"> How I Play: </p>
-    <p>{player.favorite_device || ""}</p>
+    <h4 className="text-gray-700 font-bold capitalize"> How I Play: </h4>
+    <p className= 'mb-4'>{player.favorite_device || ""}</p>
   </div>
 
       <br></br>
