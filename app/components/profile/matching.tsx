@@ -1,3 +1,4 @@
+//app/components/matching.tsx
 'use client'
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -38,6 +39,10 @@ const Matches: React.FC<MatchesProps> = ({ player_id }) => {
           }));
 
           setMatches(matchesWithUsernames);
+            // Log the matches after processing them to see the final structure
+        console.log("Processed matches with usernames:", matchesWithUsernames);
+
+        
         } else {
           console.error('Failed to fetch matches');
         }
@@ -48,6 +53,8 @@ const Matches: React.FC<MatchesProps> = ({ player_id }) => {
     };
 
     fetchMatches();
+  
+
   }, [player_id]);
 
   if (loading) {
