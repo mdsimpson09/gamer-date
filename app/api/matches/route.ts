@@ -12,7 +12,7 @@ const prisma = new PrismaClient();
 export async function GET(req: NextRequest, res: NextResponse){
   try {
     const session = await getServerSession(authOptions);
-     // console.log('Session:', session);
+     console.log('Session:', session);
  
      if (!session?.user) {
          console.log('No session');
