@@ -33,36 +33,29 @@ const Matches: React.FC<MatchesProps> = ({ player_id }) => {
     const fetchMatches = async () => {
       try {
         const response = await fetch(apiUrl);
-        if (response.ok) {
-          const playerIds: MatchesResponse = await response.json();
+        if (!response.ok) throw new Error('Failed to fetch matches');
+        const { matches: matchIds }: MatchesResponse = await response.json();
+        console.log('Received matches data:', matchIds);
 
-          // Ensuring playerIds.matches is an array before mapping over it
-          if (Array.isArray(playerIds.matches)) {
-            const matchesWithUsernames = await Promise.all(
-              playerIds.matches.map(async (id: number) => {
-                const usernameResponse = await fetch(`/api/username/${id}`);
-                if (usernameResponse.ok) {
-                  const usernameData: UsernameResponse = await usernameResponse.json();
-                  return { player_id: id, username: usernameData.username };
-                } else {
-                  console.error('Failed to fetch username for player ID:', id);
-                  return { player_id: id, username: 'Fetch Failed' }; // Fallback value
-                }
-              })
-            );
+        const matchesWithUsernames = await Promise.all(
+          matchIds.map(async (id) => {
+            const usernameResponse = await fetch(`/api/username/${id}`);
+            if (!usernameResponse.ok) {
+              console.error('Failed to fetch username for player ID:', id);
+              return { player_id: id, username: 'Fetch Failed' }; // Fallback value
+            }
+            const { username }: UsernameResponse = await usernameResponse.json();
+            return { player_id: id, username };
+          })
+        );
 
-            setMatches(matchesWithUsernames);
-            console.log("Processed matches with usernames:", matchesWithUsernames);
-          } else {
-            console.error('Matches data is not in the expected format');
-          }
-        } else {
-          console.error('Failed to fetch matches');
-        }
+        setMatches(matchesWithUsernames);
+        console.log("Processed matches with usernames:", matchesWithUsernames);
       } catch (error) {
         console.error('Error fetching matches:', error);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     };
 
     fetchMatches();
@@ -77,23 +70,18 @@ const Matches: React.FC<MatchesProps> = ({ player_id }) => {
   return (
     <div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl min-w-7 w-[475px] h-[700px]'>
       <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[500px] h-[600px] overflow-y-auto hide-scrollbar'>
-        <h1 className="text-2xl font-semibold text-center mb-4 capitalize">
-          Your Matches
-        </h1>
-        <br />
-        <div className='bg-indigo-50 p-5 rounded-sm min-w-7 flex flex-col justify-center items-center capitalize'>
+        <h1 className="text-2xl font-semibold text-center mb-4 capitalize">Your Matches</h1>
+        <div className='bg-indigo-50 p-5 rounded-sm flex flex-col justify-center items-center capitalize'>
           <ul className='list-none p-0 text-xl'>
-            {matches.length > 0 ? (
-              matches.map((match) => (
-                <Link href={`/player/${match.player_id}`} key={match.player_id}>
-                  <li className='flex items-center justify-between mb-2'>
-                    <MdGames className='flex-shrink-0' />
-                    <span className='mx-2'>{match.username ?? 'Unknown User'}</span>
-                    <MdGames className='flex-shrink-0' />
-                  </li>
-                </Link>
-              ))
-            ) : (
+            {matches.length > 0 ? matches.map((match) => (
+              <Link href={`/player/${match.player_id}`} key={match.player_id}>
+                <li className='flex items-center justify-between mb-2 cursor-pointer'>
+                  <MdGames className='flex-shrink-0' />
+                  <span className='mx-2'>{match.username ?? 'Unknown User'}</span>
+                  <MdGames className='flex-shrink-0' />
+                </li>
+              </Link>
+            )) : (
               <li>No matches found</li>
             )}
           </ul>
@@ -107,7 +95,8 @@ export default Matches;
 
 
 
-
+//app/components/matching.tsx
+// 'use client'
 
 
 // import { useEffect, useState } from 'react';
