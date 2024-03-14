@@ -51,7 +51,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
   try {
     await findAndStoreMatches();
-    return NextResponse.json({ message: 'Match check complete' }); 
+    return NextResponse.json({ message: 'Matched' }); 
   } catch (error) {
     return NextResponse.json({ message: 'Internal server error'}, { status: 500 });
   }
