@@ -54,6 +54,7 @@ const Navbar = () => {
   <Link href='/matches'><span onClick={() => handleLinkClick('/matches')} className={isActive('/matches')}>Matches</span></Link>
   <Link href='/faqs'><span onClick={() => handleLinkClick('/faqs')} className={isActive('/faqs')}>FAQs</span></Link>
   <Link href='/sign-up'><span onClick={() => handleLinkClick('/sign-up')} className={isActive('/sign-up')}>Register</span></Link>
+  <Link href='/contact'><span onClick={() => handleLinkClick('/contact')} className={isActive('/contact')}>Contact Us</span></Link>
   {session?.user ? (
     <UserAccountNav />
   ) : (

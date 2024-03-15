@@ -8,7 +8,7 @@ const AboutPage = () => {
 <div className='flex justify-center items-center bg-indigo-200 p-5 md:p-8 rounded-xl mx-auto w-full sm:w-3/4 lg:w-3/4 lg:min-h-[75vh]'>
   <div className='py-6 px-4 sm:px-6 bg-white shadow-md rounded-md overflow-y-auto hide-scrollbar w-full my-8'>
         <section className="about-section">
-        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mb-8 font-bold"> About Gamer Date</h3>
+        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center mb-8 font-semi-bold navfont "> About Gamer Date</h3>
         <div className="bg-indigo-50 p-4 sm:p-6 rounded-lg shadow-lg">
         
           <p>
@@ -23,8 +23,8 @@ const AboutPage = () => {
         </section>
         <br></br>
         <section className="getting-started-section my-8">
-          <div className="bg-indigo-50 p-6 rounded-lg shadow-lg">
-            <h2 className="text-3xl font-bold text-center mb-6">Getting Started with Gamer Date</h2>
+        <h3 className="text-3xl sm:text-3xl md:text-3xl lg:text-3xl text-center mb-2 font-semi-bold navfont "> Getting Started </h3>
+          <div className="bg-indigo-50 p-6 rounded-lg shadow-lg ">
         <ul className="list-decimal ml-4">
             <li className="mb-4">
               <strong>Sign Up</strong>
@@ -62,11 +62,11 @@ const AboutPage = () => {
           </div>
         </section>
 
-          {/* Add more content and visuals here */}
+       
         
         <br></br>
-        <section className="endorsements-section my-8">
-          <h2 className="text-3xl font-bold text-center mb-6">What Gamers are saying about Gamer Date</h2>
+        <section className="endorsements-section ">
+          <h2 className="text-3xl font-semi-bold text-center mb-6 navfont">What Gamers are saying about Gamer Date</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-indigo-50 p-4 rounded-lg shadow-lg">
               <p className="font-semibold">EpicRogueQueen</p>
@@ -84,9 +84,21 @@ const AboutPage = () => {
         </section>
         <br></br>
         <section className="how-it-works-section">
-        <h4 className="sm:text-2xl text-center mb-8 font-bold"> Be sure to read the community standards</h4>
-          <p>
-            Read the Community Standards <Link href="/faqs" className="text-lg text-indigo-400"> here. </Link>
+       
+          <h4 className="text-2xl sm:text-2xl md:text-2xl lg:text-2xl text-center mb-2 mt-4 navfont font-semi-bold">
+        Contact Us
+      </h4>
+<div className="bg-indigo-50 p-6 rounded-lg shadow-lg mb-6 navfont">
+   
+      <p className="text-base sm:text-lg mb-4">
+        We're here to help! If you have any questions, concerns, or need to report any suspicious behavior on our site, our dedicated team is ready to assist you. Ensuring a safe and positive experience for all our users is our top priority, and we welcome your feedback to help us achieve this goal.
+      </p>
+      <br></br>
+      <p className= 'text-base sm:text-lg'>Fill out our online <Link href="/contact" className=" text-lg font-bold text-indigo-700"> contact form </Link> with your message, and one of our staff members will get back to you as soon as possible.</p>
+      </div>
+      <h4 className="sm:text-2xl text-center mb-8 font-bold"> Be sure to read the community standards</h4>
+          <p className='text-center'>
+            Read the Community Standards <Link href="/faqs" className="text-lg text-indigo-500 font-bold"> here. </Link>
           </p>
    
         </section>

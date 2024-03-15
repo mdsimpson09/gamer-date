@@ -1,10 +1,11 @@
+import Link from 'next/link';
 import React from 'react';
 
 const faqs = () => {
   return (
 <div className='flex justify-center items-center bg-indigo-200 p-5 sm:ml-2 sm:mr-2 sm:p-8 md:p-8 md:mr-2 md:ml-2 rounded-xl mx-auto w-full sm:w-3/4 sm:py-10 lg:min-h-[75vh]'>
       <div className='py-6 px-4 sm:px-6 bg-white shadow-md rounded-md overflow-y-auto hide-scrollbar w-full my-8'>
-    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-8 font-bold">Community Standards</h3>
+    <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-8 navfont font-semi-bold">Community Standards</h3>
       <div className="bg-indigo-50 p-4 sm:p-6 rounded-lg shadow-lg">
       <ul className="list-disc ml-4 text-base sm:text-lg mb-4">
         <li className="text-base sm:text-lg mb-4">
@@ -58,20 +59,32 @@ const faqs = () => {
         </ul>
       </div>
     <div className="bg-indigo-50 p-6 rounded-lg shadow-lg mb-6"> 
-      <h4 className="text-2xl sm:text-2xl md:text-2xl lg:text-2xl text-center mb-8 font-bold">
+      <h4 className="text-2xl sm:text-2xl md:text-2xl lg:text-2xl text-center mb-8 font-bold navfont">
         Reporting
       </h4>
       <p>
         As a member of the Gamer Date community, we encourage you to speak up and speak out. If someone is causing you harm, making you feel uncomfortable, or is violating our Community Guidelines, please report it. Your report is always confidential.
       </p>
       </div>
-<div className="bg-indigo-50 p-6 rounded-lg shadow-lg mb-6">
-      <h4 className="text-2xl sm:text-2xl md:text-2xl lg:text-2xl text-center mb-8 font-bold">
+      <h4 className="text-2xl sm:text-2xl md:text-2xl lg:text-2xl text-center mb-2 mt-4 navfont font-semi-bold">
         Impact
       </h4>
+<div className="bg-indigo-50 p-6 rounded-lg shadow-lg mb-6">
+   
       <p className="text-base sm:text-lg mb-4">
         We take our Community Guidelines and the impact they have on our community seriously. We&apos;ll do everything we can to make sure people follow them. We reserve the right to investigate and/or terminate accounts if we find you have misused the Service or behaved in a way Gamer Date deems inappropriate, unlawful, or in violation of our Community Guidelines or Terms of Use, including actions or communications that occur off the Service but involve others you meet through the Service.
       </p>
+      </div>
+      <h4 className="text-2xl sm:text-2xl md:text-2xl lg:text-2xl text-center mb-2 mt-4 navfont font-semi-bold">
+        Contact Us
+      </h4>
+<div className="bg-indigo-50 p-6 rounded-lg shadow-lg mb-6 navfont">
+   
+      <p className="text-base sm:text-lg mb-4">
+        We're here to help! If you have any questions, concerns, or need to report any suspicious behavior on our site, our dedicated team is ready to assist you. Ensuring a safe and positive experience for all our users is our top priority, and we welcome your feedback to help us achieve this goal.
+      </p>
+      <br></br>
+      <p className= 'text-base sm:text-lg'>Fill out our online <Link href="/contact" className=" text-lg font-bold text-indigo-700"> contact form </Link> with your message, and one of our staff members will get back to you as soon as possible.</p>
       </div>
     </div>
     </div>

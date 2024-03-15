@@ -68,8 +68,11 @@ const Matches: React.FC<MatchesProps> = ({ player_id }) => {
   }
 
   return (
-    <div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl min-w-7 w-[475px] h-[700px]'>
-      <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[500px] h-[600px] overflow-y-auto hide-scrollbar'>
+    // <div className='flex justify-center items-center bg-indigo-200 p-10 rounded-xl min-w-7 w-[475px] h-[700px]'>
+    //   <div className='max-w-3xl py-6 px-6 bg-white shadow-md rounded-md my-8 w-[500px] h-[600px] overflow-y-auto hide-scrollbar'>
+
+    <div className='flex justify-center items-center bg-indigo-200 p-5 md:p-8 rounded-xl mx-auto w-full sm:w-3/4 lg:w-3/4 lg:min-h-[75vh]'>
+  <div className='py-6 px-4 sm:px-6 bg-white shadow-md rounded-md overflow-y-auto hide-scrollbar w-full my-8'>
         <h1 className="text-2xl font-semibold text-center mb-4 capitalize">Your Matches</h1>
         <div className='bg-indigo-50 p-5 rounded-sm flex flex-col justify-center items-center capitalize'>
           <ul className='list-none p-0 text-xl'>
