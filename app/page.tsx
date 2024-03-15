@@ -16,7 +16,7 @@ export default async function Home() {
 
 <div className="flex justify-center items-center bg-indigo-200 p-5 sm:p-10 rounded-xl w-full mt-6 ">
   <div className="bg-white shadow-md rounded-md overflow-y-auto w-full max-w-none lg:max-w-6xl mx-auto p-6">
-    <div className="flex lg:flex-row items-center ">
+  <div className="flex lg:flex-row items-center ">
       <img className="mt-4 ml-2 sm:ml-6 sm:w-auto w-[75%] -mb-24 sm:-mb-48 md:-mb-42 lg:-mb-48" src="/combo.png" alt="logo" />
       {/* <h3 className="text-3xl md:text-4xl lg:text-5xl mt-4 lg:mt-0 uppercase exo text-indigo-700">Gamer Date </h3>
       <h3> <img className="mt-10 lg:h-80 md:h-80 sm:h-48 xs:h-40" src="/gamerdate.png" alt="logo" /></h3> */}
