@@ -1,4 +1,4 @@
-# Name: Gamer-Date App
+# Gamer-Date App
 
 # www.gamer-date.net
 
