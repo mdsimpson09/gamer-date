@@ -23,8 +23,8 @@ const AboutPage = () => {
         </section>
         <br></br>
         <section className="getting-started-section my-8">
-        <h3 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl text-center mb-2 font-semi-bold navfont ml-8 md:-mb-12 lg:-mb-32 sm:-mb-32"> Getting Started </h3>
-        <img className=" h-[30vh] -mt-24 object-cover ml-2 md:-ml-12 sm:w-auto w-[35%] -mb-14 sm:-mb-20 sm:-ml-16 md:-mb-20 lg:-mb-20 lg:-ml-8" src="/5.png" alt="logo" />
+        <h3 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl text-center mb-2 font-semi-bold navfont ml-8 md:-mb-12 lg:-mb-32 sm:-mb-32 sm:-ml-6"> Getting Started </h3>
+        <img className=" h-[30vh] -mt-24 object-cover ml-2 md:-ml-12 sm:w-auto w-[35%] -mb-14 xs:-mb-20 sm:-mb-24 sm:-ml-16 md:-mb-20 lg:-mb-20 lg:-ml-8" src="/5.png" alt="logo" />
         
           <div className="bg-indigo-50 p-6 rounded-lg shadow-lg ">
         <ul className="list-decimal ml-4">
